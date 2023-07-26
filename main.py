@@ -152,7 +152,6 @@ def main():
     selected_video = st.selectbox("Select a video", video_files)
 
     base_dir = "T5"
-    # os.chdir(base_dir)
     video_path = os.path.join(base_dir, selected_video)
     st.write(f"Selected Video Path: {video_path}")
     capture = cv.VideoCapture(video_path)
