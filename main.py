@@ -151,7 +151,8 @@ def main():
 
     selected_video = st.selectbox("Select a video", video_files)
 
-    video_path = os.path.join(selected_video)
+    base_dir = "T5"
+    video_path = os.path.join(base_dir, selected_video)
     capture = cv.VideoCapture(video_path)
     
     picMode = False
