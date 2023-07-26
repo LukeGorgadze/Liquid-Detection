@@ -153,6 +153,7 @@ def main():
 
     base_dir = "T5"
     video_path = os.path.join(base_dir, selected_video)
+    st.write(f"Selected Video Path: {video_path}")
     capture = cv.VideoCapture(video_path)
     
     picMode = False
