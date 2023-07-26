@@ -142,16 +142,17 @@ def main():
     to relevant liquid groups according to the k means algorithm. Lastly percent = fill/area * 100""")
 
     video_files = [
-        "Blue.mp4",
-        "Circle.mp4",
-        "Red.mp4",
-        "triangle.mp4",
-        "Yellow.mp4"
+        "vids/Blue.mp4",
+        "vids/Circle.mp4",
+        "vids/Red.mp4",
+        "vids/triangle.mp4",
+        "vids/Yellow.mp4"
     ]
 
     selected_video = st.selectbox("Select a video", video_files)
 
-    base_dir = "T5/vids"
+    base_dir = "T5"
+    os.chdir(base_dir)
     video_path = os.path.join(base_dir, selected_video)
     st.write(f"Selected Video Path: {video_path}")
     capture = cv.VideoCapture(video_path)
