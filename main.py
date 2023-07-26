@@ -425,7 +425,6 @@ if picMode:
         
 
     capture.release()
-    cv.destroyAllWindows()
 
 if __name__ == "__main__":
     main()
