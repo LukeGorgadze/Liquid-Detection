@@ -1,3 +1,4 @@
+import os
 import time
 import streamlit as st
 import cv2 as cv
@@ -150,7 +151,9 @@ def main():
 
     selected_video = st.selectbox("Select a video", video_files)
 
-    capture = cv.VideoCapture(selected_video)
+    video_path = os.path.join("T5", selected_video)
+    capture = cv.VideoCapture(video_path)
+    
     picMode = False
 
   
